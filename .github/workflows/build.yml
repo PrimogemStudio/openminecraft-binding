@@ -195,7 +195,7 @@ jobs:
       - name: Configure MacOS
         if: matrix.plat == 'macos'
         run: |
-          ls /System/Library/Frameworks/OpenGL.framework
+          ls /System/Library/Frameworks/OpenGL.framework/OpenGL
           xmake f -m ${{ env.MODE }} --cxx="clang++" -yc ${{ env.XMAKE_ARGS }}
 
       - name: Configure IOS
