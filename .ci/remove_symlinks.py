@@ -13,6 +13,8 @@ for file in os.listdir(pth):
         os.remove(fp)
     elif file == "OpenAL32.dll":
         os.rename(fp, fp.replace("OpenAL32.dll", "openal.dll"))
+    elif file == "glfw3.dll":
+        os.rename(fp, fp.replace("glfw3.dll", "glfw.dll"))
     else:
         filenameparts = file.split(".")
         resultparts = []
