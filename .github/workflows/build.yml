@@ -193,6 +193,7 @@ jobs:
           unzip android-ndk-${{ env.ANDROID_NDK_VERSION }}-linux.zip
           ndk=${{ github.workspace }}/android-ndk-${{ env.ANDROID_NDK_VERSION }}
           echo "ANDROID_NDK=$ndk" >> ${GITHUB_ENV}
+          cd ${{ env.ANDROID_NDK }}
           ./ndk-build
 
       - name: Configure MacOS
