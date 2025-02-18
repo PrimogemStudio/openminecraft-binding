@@ -190,7 +190,7 @@ jobs:
         if: matrix.plat == 'android'
         run: |
           wget -q https://dl.google.com/android/repository/android-ndk-${{ env.ANDROID_NDK_VERSION }}-linux.zip
-          unzip android-ndk-${{ env.ANDROID_NDK_VERSION }}-linux.zip
+          unzip -q android-ndk-${{ env.ANDROID_NDK_VERSION }}-linux.zip
           ndk=${{ github.workspace }}/android-ndk-${{ env.ANDROID_NDK_VERSION }}
           echo "ANDROID_NDK=$ndk" >> ${GITHUB_ENV}
           cd ${{ env.ANDROID_NDK }}
