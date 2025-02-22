@@ -14,7 +14,7 @@ package("glfw-mod")
     elseif is_plat("mingw") then
         add_syslinks("gdi32")
     elseif is_plat("android") then
-        add_syslinks("dl")
+        add_syslinks("dl", "log", "android")
     elseif is_plat("linux") then
         add_syslinks("dl", "pthread")
     end
