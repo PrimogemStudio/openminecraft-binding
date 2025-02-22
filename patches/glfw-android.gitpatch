@@ -10,3 +10,25 @@ index a4b5268b..f69770d0 100644
  endif()
  
  if (GLFW_BUILD_X11 OR GLFW_BUILD_WAYLAND)
+diff --git a/src/android_init.c b/src/android_init.c
+index ba6ebdd9..7fabb8ef 100644
+--- a/src/android_init.c
++++ b/src/android_init.c
+@@ -33,8 +33,6 @@
+ 
+ struct android_app* _globalAndroidApp = NULL;
+ 
+-extern int main();
+-
+ void handleAppCmd(struct android_app* app, int32_t cmd)
+ {
+     switch (cmd)
+@@ -99,8 +97,6 @@ void android_main(struct android_app* app)
+     app->onAppCmd = handleAppCmd;
+ 
+     _globalAndroidApp = app;
+-
+-    main();
+ }
+ 
+ //////////////////////////////////////////////////////////////////////////
