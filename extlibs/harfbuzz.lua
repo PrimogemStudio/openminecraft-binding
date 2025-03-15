@@ -85,3 +85,4 @@ end
 target("harfbuzz")
 set_kind("shared")
 libharfbuzz_source()
+add_rules("utils.symbols.export_all")
