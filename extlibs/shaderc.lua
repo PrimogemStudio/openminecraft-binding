@@ -57,3 +57,4 @@ add_includedirs("spirv-tools")
 if not is_plat("windows") then
     add_defines("SPIRV_TIMER_ENABLED=1")
 end
+add_rules("utils.symbols.export_all")
