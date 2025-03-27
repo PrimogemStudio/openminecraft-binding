@@ -3,7 +3,7 @@ package("glfw-mod")
 
     add_configs("glfw_include", {description = "Choose submodules enabled in glfw", default = "none", type = "string", values = {"none", "vulkan", "glu", "glext", "es2", "es3", "system"}})
     add_configs("x11", {description = "Build support for X11", default = is_plat("linux"), type = "boolean"})
-    add_configs("wayland", {description = "Build support for Wayland", default = false, type = "boolean"})
+    add_configs("wayland", {description = "Build support for Wayland", default = true, type = "boolean"})
 
     add_deps("cmake")
     add_deps("opengl", {optional = true})
