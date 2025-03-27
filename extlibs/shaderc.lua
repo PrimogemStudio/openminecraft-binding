@@ -17,7 +17,6 @@ package("glslang-local")
     add_deps("cmake")
     set_sourcedir(path.join(os.scriptdir(), "glslang"))
     add_deps("spirv-tools-local")
-    add_syslinks("atomic")
     on_install(function (package)
         local configs = { "-DENABLE_OPT=1", "-DALLOW_EXTERNAL_SPIRV_TOOLS=ON" }
         local pth = path.join(os.scriptdir(), "glslang/glslang/CMakeLists.txt")
