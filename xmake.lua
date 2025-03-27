@@ -7,8 +7,8 @@ includes("extlibs/meshoptimizer.lua")
 includes("extlibs/yoga.lua")
 includes("extlibs/stb.lua")
 if not is_plat("bsd") then
-    if not is_plat("linux") or not is_arch("riscv64") then
-    	includes("extlibs/shaderc.lua")
+    if not is_plat("linux") or not is_arch("riscv32") then
+        includes("extlibs/shaderc.lua")
     end
 end
 
