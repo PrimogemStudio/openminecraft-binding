@@ -22,7 +22,7 @@ package("glslang-local")
         local pth = path.join(os.scriptdir(), "glslang/glslang/CMakeLists.txt")
         io.replace(pth, "message(\"unknown platform\")", "add_subdirectory(OSDependent/Unix)", { plain = true })
         local pth = path.join(os.scriptdir(), "glslang/StandAlone/CMakeLists.txt")
-        if is_plat("iphoneos", "macosx")
+        if not is_plat("iphoneos", "macosx") then
             io.replace(pth, "set(LIBRARIES ${LIBRARIES} pthread)", "set(LIBRARIES ${LIBRARIES} pthread atomic)", { plain = true })
         end
         import("package.tools.cmake").install(package, configs)
