@@ -1,11 +1,11 @@
 set_languages("c++17")
 
-includes("extlibs/freetype.lua")
-includes("extlibs/xxhash.lua")
-includes("extlibs/openal.lua")
-includes("extlibs/meshoptimizer.lua")
-includes("extlibs/yoga.lua")
-includes("extlibs/stb.lua")
+--includes("extlibs/freetype.lua")
+--includes("extlibs/xxhash.lua")
+--includes("extlibs/openal.lua")
+--includes("extlibs/meshoptimizer.lua")
+--includes("extlibs/yoga.lua")
+--includes("extlibs/stb.lua")
 includes("extlibs/shaderc.lua")
 
 if not is_plat("iphoneos", "harmony", "android") then
