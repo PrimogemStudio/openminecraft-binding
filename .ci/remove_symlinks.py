@@ -6,6 +6,7 @@ if len(sys.argv) <= 1:
 
 pth = sys.argv[1]
 for file in os.listdir(pth):
+    print(file)
     fp = os.path.join(pth, file)
     if os.path.isdir(fp):
         continue
