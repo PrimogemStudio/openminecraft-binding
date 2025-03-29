@@ -37,7 +37,11 @@ end
 
 target("openminecraft")
 set_kind("binary")
-add_files("src/external/placeholder.cpp")
+add_includedirs("include")
+add_headerfiles("include/**.h", "include/**.hpp")
+add_files("src/main.cpp")
+add_files("console/console.cpp")
+
 add_packages("harfbuzz", "freetype", "glm", "bullet3", "openal-soft-mod", "yoga", "stb", "xxhash", "opengl-headers", "vulkan-headers")
 if not is_plat("iphoneos", "harmony", "android") then
     add_packages("glfw-mod", "opengl")
