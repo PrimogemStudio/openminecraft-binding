@@ -279,7 +279,9 @@ jobs:
             xmake f -m ${{ env.MODE }} -yc ${{ env.XMAKE_ARGS }}
             xmake -y --jobs=${{ env.JOBS }} --linkjobs=${{ env.LINK_JOBS }} ${{ env.XMAKE_ARGS }}
 
-            rm -rf extlibs/MoltenVK extlibs/harfbuzz extlibs/freetype extlibs/glslang
+            cd extlibs
+            rm -rf MoltenVK glslang openal-soft glfw googletest
+            cd ..
 
             xmake install -o prod ${{ env.XMAKE_ARGS }} -v
 
