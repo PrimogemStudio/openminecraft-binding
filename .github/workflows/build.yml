@@ -279,9 +279,9 @@ jobs:
             xmake f -m ${{ env.MODE }} -yc ${{ env.XMAKE_ARGS }}
             xmake -y --jobs=${{ env.JOBS }} --linkjobs=${{ env.LINK_JOBS }} ${{ env.XMAKE_ARGS }}
 
-            rm -rf extlibs
+            rm -rf extlibs/MoltenVK
 
-            xmake install -o prod ${{ env.XMAKE_ARGS }}
+            xmake install -o prod ${{ env.XMAKE_ARGS }} -v
 
       - name: Xmake install
         if: matrix.plat != 'freebsd'
