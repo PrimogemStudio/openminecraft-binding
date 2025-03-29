@@ -16,20 +16,20 @@ if not is_plat("iphoneos", "harmony", "android") then
     end
 end
 
-add_requires("bullet3", "glm", { system = false })
-add_rules("mode.debug")
-add_rules("mode.release")
+--add_requires("bullet3", "glm", { system = false })
+--add_rules("mode.debug")
+--add_rules("mode.release")
 
-function libmmd_source()
-    add_packages("bullet3", "glm")
-    add_files("src/libmmd/**.cpp")
-    add_includedirs("include")
-end
+--function libmmd_source()
+--    add_packages("bullet3", "glm")
+--    add_files("src/libmmd/**.cpp")
+--    add_includedirs("include")
+--end
 
-target("mmd")
-set_kind("shared")
-libmmd_source()
+--target("mmd")
+--set_kind("shared")
+--libmmd_source()
 
-target("mmdtest")
-set_kind("binary")
-libmmd_source()
+--target("mmdtest")
+--set_kind("binary")
+--libmmd_source()
