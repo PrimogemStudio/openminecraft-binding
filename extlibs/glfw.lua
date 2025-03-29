@@ -64,9 +64,4 @@ package("glfw-mod")
     end)
 package_end()
 
-add_requires("glfw-mod", { configs = { shared = true } })
-
-target("glfw-wrap")
-set_kind("binary")
-add_files("../src/external/glfw/helper.cpp")
-add_packages("glfw-mod")
+add_requires("glfw-mod", { configs = { shared = false } })

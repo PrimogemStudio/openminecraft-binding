@@ -41,7 +41,7 @@ package_end()
 add_requires("glslang-local", "spirv-tools-local", "googletest-local", { configs = { shared = false } })
 
 target("shaderc")
-set_kind("shared")
+set_kind("static")
 add_packages("glslang-local", "spirv-tools-local", "googletest-local")
 add_includedirs("spirv-headers/include")
 add_includedirs("glslang")
@@ -61,4 +61,3 @@ add_includedirs("spirv-tools")
 if not is_plat("windows") then
     add_defines("SPIRV_TIMER_ENABLED=1")
 end
-add_rules("utils.symbols.export_all")

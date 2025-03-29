@@ -125,19 +125,19 @@ jobs:
             libc_arch: loongarch64
             loaderarch: loong64
 
-          - os: ubuntu-22.04
-            name: FreeBSD (x64)
-            plat: freebsd
-            arch: x64
-            containerarch: x86-64
-            loaderarch: x64
+          # - os: ubuntu-22.04
+          #   name: FreeBSD (x64)
+          #   plat: freebsd
+          #   arch: x64
+          #   containerarch: x86-64
+          #   loaderarch: x64
 
-          - os: ubuntu-22.04
-            name: FreeBSD (arm64)
-            plat: freebsd
-            arch: arm64
-            containerarch: arm64
-            loaderarch: arm64
+          # - os: ubuntu-22.04
+          #   name: FreeBSD (arm64)
+          #   plat: freebsd
+          #   arch: arm64
+          #   containerarch: arm64
+          #   loaderarch: arm64
 
           - os: macos-latest
             name: MacOS (arm64)
@@ -299,9 +299,8 @@ jobs:
         run: |
           cp prod/lib/* target/${{ matrix.plat }}/${{ matrix.loaderarch }}
 
-      - name: Remove unnecessary executables & rename libs
+      - name: Rename libs
         run: |
-          rm target/${{ matrix.plat }}/${{ matrix.loaderarch }}/*wrap*
           python .ci/remove_symlinks.py target/${{ matrix.plat }}/${{ matrix.loaderarch }}
 
       - name: MoltenVK Build

@@ -1,5 +1,4 @@
 target("xxhash")
-set_kind("shared")
+set_kind("static")
 add_files("xxHash/xxhash.c")
 add_includedirs("xxHash")
-add_rules("utils.symbols.export_all")

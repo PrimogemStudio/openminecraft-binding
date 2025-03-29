@@ -1,5 +1,4 @@
 target("stb")
-set_kind("shared")
+set_kind("static")
 add_files("../src/external/stb/stb*.c")
 add_includedirs("stb")
-add_rules("utils.symbols.export_all")

@@ -1,5 +1,4 @@
 target("meshoptimizer")
-set_kind("shared")
+set_kind("static")
 add_files("meshoptimizer/src/**.cpp")
 add_includedirs("meshoptimizer/src")
-add_rules("utils.symbols.export_all")
