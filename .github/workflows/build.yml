@@ -32,55 +32,55 @@ jobs:
             arch: arm64
             loaderarch: arm64
 
-          - os: ubuntu-22.04
+          - os: ubuntu-latest
             name: OpenHarmony (arm64)
             plat: harmony
             arch: arm64-v8a
             loaderarch: arm64
 
-          - os: ubuntu-22.04
+          - os: ubuntu-latest
             name: OpenHarmony (arm32)
             plat: harmony
             arch: armeabi-v7a
             loaderarch: arm32
 
-          - os: ubuntu-22.04
+          - os: ubuntu-latest
             name: OpenHarmony (x64)
             plat: harmony
             arch: x86_64
             loaderarch: x64
 
-          - os: ubuntu-22.04
+          - os: ubuntu-latest
             name: Android (arm64)
             plat: android
             arch: arm64-v8a
             loaderarch: arm64
 
-          - os: ubuntu-22.04
+          - os: ubuntu-latest
             name: Android (arm32)
             plat: android
             arch: armeabi-v7a
             loaderarch: arm32
 
-          - os: ubuntu-22.04
+          - os: ubuntu-latest
             name: Android (x86)
             plat: android
             arch: x86
             loaderarch: x86
 
-          - os: ubuntu-22.04
+          - os: ubuntu-latest
             name: Android (x64)
             plat: android
             arch: x86_64
             loaderarch: x64
 
-          - os: ubuntu-22.04
+          - os: ubuntu-latest
             name: Android (riscv64)
             plat: android
             arch: riscv64
             loaderarch: riscv64
 
-          - os: ubuntu-22.04
+          - os: ubuntu-latest
             name: Linux (x64)
             plat: linux
             arch: x64
@@ -125,14 +125,14 @@ jobs:
             libc_arch: loongarch64
             loaderarch: loong64
 
-          - os: ubuntu-22.04
+          - os: ubuntu-latest
             name: FreeBSD (x64)
             plat: freebsd
             arch: x64
             containerarch: x86-64
             loaderarch: x64
 
-          - os: ubuntu-22.04
+          - os: ubuntu-latest
             name: FreeBSD (arm64)
             plat: freebsd
             arch: arm64
