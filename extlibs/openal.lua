@@ -4,7 +4,7 @@ package("openal-soft-mod")
     add_deps("cmake")
 
     if is_plat("windows", "mingw") then
-        add_syslinks("ole32", "shell32", "user32", "winmm", "kernel32")
+        add_syslinks("ole32", "shell32", "user32", "winmm", "kernel32", "avrt")
     elseif is_plat("linux", "cross") then
         add_syslinks("dl", "pthread")
      elseif is_plat("bsd", "cross") then
