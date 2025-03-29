@@ -41,7 +41,10 @@ package_end()
 add_requires("glslang-local", "spirv-tools-local", "googletest-local", { configs = { shared = false } })
 
 function shaderc_source()
-add_packages("glslang-local", "spirv-tools-local", "googletest-local")
+add_packages("spirv-tools-local", "googletest-local")
+if not is_plat("iphoneos") then
+    add_packages("glslang-local")
+end
 add_includedirs("extlibs/spirv-headers/include")
 add_includedirs("extlibs/glslang")
 
