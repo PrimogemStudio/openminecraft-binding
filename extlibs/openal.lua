@@ -23,7 +23,6 @@ package("openal-soft-mod")
 
     on_install("windows", "linux", "mingw", "macosx", "android", "iphoneos", "cross", "bsd", "harmony" , function (package)
         if (package:is_plat("linux") and linuxos.name() == "fedora") or package:is_plat("bsd") then
-            -- https://github.com/kcat/openal-soft/issues/864
             io.replace("CMakeLists.txt", "if(HAVE_GCC_PROTECTED_VISIBILITY)", "if(0)", {plain = true})
         end
         local configs = {"-DALSOFT_EXAMPLES=OFF", "-DALSOFT_UTILS=OFF", "-DALSOFT_BACKEND_SNDIO=OFF"}
