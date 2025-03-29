@@ -40,24 +40,24 @@ package_end()
 
 add_requires("glslang-local", "spirv-tools-local", "googletest-local", { configs = { shared = false } })
 
-target("shaderc")
-set_kind("static")
+function shaderc_source()
 add_packages("glslang-local", "spirv-tools-local", "googletest-local")
-add_includedirs("spirv-headers/include")
-add_includedirs("glslang")
+add_includedirs("extlibs/spirv-headers/include")
+add_includedirs("extlibs/glslang")
 
-add_files("shaderc/libshaderc/src/shaderc.cc")
-add_includedirs("shaderc/libshaderc/include")
-add_includedirs("shaderc/libshaderc/src")
-add_files("shaderc/libshaderc_util/src/*.cc")
-add_includedirs("shaderc/libshaderc_util/include")
+add_files("extlibs/shaderc/libshaderc/src/shaderc.cc")
+add_includedirs("extlibs/shaderc/libshaderc/include")
+add_includedirs("extlibs/shaderc/libshaderc/src")
+add_files("extlibs/shaderc/libshaderc_util/src/*.cc")
+add_includedirs("extlibs/shaderc/libshaderc_util/include")
 add_defines("ENABLE_HLSL=1")
 if is_plat("windows") then
     add_defines("WIN32")
 end
-add_files("spirv-tools/source/util/timer.cpp")
-add_files("spirv-tools/source/util/bit_vector.cpp")
-add_includedirs("spirv-tools")
+add_files("extlibs/spirv-tools/source/util/timer.cpp")
+add_files("extlibs/spirv-tools/source/util/bit_vector.cpp")
+add_includedirs("extlibs/spirv-tools")
 if not is_plat("windows") then
     add_defines("SPIRV_TIMER_ENABLED=1")
+end
 end
