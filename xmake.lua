@@ -11,7 +11,7 @@ if not is_plat("bsd") then
 end
 
 if not is_plat("iphoneos", "harmony", "android") then
-    if not is_plat("linux") or is_arch("x86_64", "x64") then 
+    if not is_plat("linu") or is_arch("x86_64", "x64") then 
         includes("extlibs/glfw.lua")
     end
 end
