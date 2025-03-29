@@ -18,7 +18,7 @@ package("glslang-local")
     set_sourcedir(path.join(os.scriptdir(), "glslang"))
     add_deps("spirv-tools-local")
     on_install(function (package)
-        local configs = { "-DENABLE_OPT=1", "-DALLOW_EXTERNAL_SPIRV_TOOLS=ON", "-DENABLE_HLSL=ON" }
+        local configs = { "-DENABLE_OPT=0", "-DALLOW_EXTERNAL_SPIRV_TOOLS=OFF", "-DENABLE_HLSL=OFF" }
         local pth = path.join(os.scriptdir(), "glslang/glslang/CMakeLists.txt")
         io.replace(pth, "message(\"unknown platform\")", "add_subdirectory(OSDependent/Unix)", { plain = true })
         local pth = path.join(os.scriptdir(), "glslang/StandAlone/CMakeLists.txt")
@@ -53,7 +53,7 @@ add_includedirs("extlibs/shaderc/libshaderc/include")
 add_includedirs("extlibs/shaderc/libshaderc/src")
 add_files("extlibs/shaderc/libshaderc_util/src/*.cc")
 add_includedirs("extlibs/shaderc/libshaderc_util/include")
-add_defines("ENABLE_HLSL=1")
+-- add_defines("ENABLE_HLSL=1")
 if is_plat("windows") then
     add_defines("WIN32")
 end
